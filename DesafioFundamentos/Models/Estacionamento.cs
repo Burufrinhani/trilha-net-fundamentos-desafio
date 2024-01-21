@@ -1,5 +1,3 @@
-using Microsoft.Win32.SafeHandles;
-
 namespace DesafioFundamentos.Models
 {
     public class Estacionamento
@@ -16,6 +14,7 @@ namespace DesafioFundamentos.Models
 
         public void AdicionarVeiculo()
         {
+            //Solicita placa e adiciona um veículo ao estacionamento
             Console.WriteLine("Digite a placa do veículo para estacionar:");
             string placa = Console.ReadLine();
 
@@ -24,13 +23,14 @@ namespace DesafioFundamentos.Models
 
         public void RemoverVeiculo()
         {
+            // Verifica o veículo a ser removido
             Console.WriteLine("Digite a placa do veículo para remover:");
 
             string placa = Console.ReadLine();
 
             if (veiculos.Any(x => x.ToUpper() == placa.ToUpper()))
             {
-                Console.WriteLine("Digite a quantidade de horas que o veículo permaneceu estacionado:");
+                Console.WriteLine("Insira o tempo que o veículo permaneceu estacionado:");
 
                 int horas = Convert.ToByte(Console.ReadLine());
 
